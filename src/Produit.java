@@ -10,20 +10,16 @@ public class Produit {
 
     public Produit() {}
 
-    public Produit(int identifiant,String libelle, String marque, double prix) {
-        this.libelle = libelle;
-        this.identifiant = identifiant;
-        this.marque = marque;
-        this.prix = prix;
-    }
-
     public Produit( int identifiant,String libelle, String marque) {
         this.libelle = libelle;
         this.identifiant = identifiant;
         this.marque = marque;
     }
 
-
+    public Produit(int identifiant,String libelle, String marque, double prix) {
+        this(identifiant,libelle,marque);
+        this.prix = prix;
+    }
 
     @Override
     public String toString() {

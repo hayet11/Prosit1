@@ -40,7 +40,12 @@ public class Main {
         magasin1.ajouter(produit2);
         magasin1.ajouter(produit3);
         System.out.println(magasin1);
-        System.out.println("Nombre produits = "+magasin1.nbrProduits());
+        Magasin magasin2 = new Magasin();
+        magasin2.ajouter(produit1);
+        magasin2.ajouter(produit2);
+        magasin2.ajouter(produit3);
+        System.out.println(magasin1);
+        System.out.println("Nombre produits de tous les magasins = "+(magasin1.nbrProduits()+magasin2.nbrProduits()));
 
     }
 }

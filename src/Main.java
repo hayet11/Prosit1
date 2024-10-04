@@ -39,13 +39,30 @@ public class Main {
         magasin1.ajouter(produit1);
         magasin1.ajouter(produit2);
         magasin1.ajouter(produit3);
-        System.out.println(magasin1);
+        magasin1.afficherMagasin();
         Magasin magasin2 = new Magasin();
         magasin2.ajouter(produit1);
         magasin2.ajouter(produit2);
         magasin2.ajouter(produit3);
         System.out.println(magasin1);
-        System.out.println("Nombre produits de tous les magasins = "+(magasin1.nbrProduits()+magasin2.nbrProduits()));
+        System.out.println("Nombre produits de tous les magasins = "+Magasin.getNbrTotal());
 
+        //prosit3
+
+        System.out.println(produit1.comparer(produit2));
+        System.out.println(Produit.comparer(produit1,produit2));
+        System.out.println("Avant la suppression");
+        magasin1.afficherMagasin();
+        magasin1.supprimerProduit(produit1);
+        System.out.println("Apres la suppression");
+        magasin1.afficherMagasin();
+
+        //ajouter produit
+        magasin1.ajouter(produit1);
+        //ajouter mm produit
+        magasin1.ajouter(produit1);
+
+        //comparer magasin1 et magasin2
+        Magasin.comparerMagasins(magasin1,magasin2).afficherMagasin();
     }
 }

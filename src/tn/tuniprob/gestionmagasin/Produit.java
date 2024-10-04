@@ -51,9 +51,8 @@ public class Produit {
         this.dateExpiration = dateExpiration;
     }
 
-
-
-    public Produit() {}
+    public Produit() {
+    }
 
     public Produit( int identifiant,String libelle, String marque) {
         this.libelle = libelle;
@@ -68,7 +67,7 @@ public class Produit {
 
     @Override
     public String toString() {
-        return "tn.tuniprob.gestionmagasin.Produit{" +
+        return "Produit{" +
                 "  libelle='" + libelle + '\'' +
                 ", prix=" + prix +
                 '}';
@@ -80,4 +79,16 @@ public class Produit {
         System.out.println("Marque : "+this.marque);
         System.out.println("Prix : "+this.prix);
     }
+
+    public boolean comparer(Produit produit){
+        return (produit.identifiant== this.identifiant &&
+                produit.libelle.equals(this.libelle) &&
+                produit.prix==this.prix);
+    }
+    public static boolean comparer(Produit p1,Produit p2){
+        return  (p1.identifiant== p2.identifiant &&
+                 p1.libelle.equals(p2.libelle) &&
+                 p1.prix==p2.prix);
+    }
+
 }

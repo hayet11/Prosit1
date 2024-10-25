@@ -61,8 +61,7 @@ public abstract class Employe {
 
     @Override
     public boolean equals(Object obj) {
-        if(obj instanceof Employe){
-            Employe emp = (Employe) obj;
+        if(obj instanceof Employe emp){
             return this.identifiant==emp.getIdentifiant() && Objects.equals(this.nom, emp.nom)&& Objects.equals(this.adresse, emp.getAdresse());
         }
         return false;

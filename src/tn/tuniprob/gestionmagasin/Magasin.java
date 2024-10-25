@@ -149,8 +149,8 @@ public class Magasin {
 
     public void afficherPrime(){
         for (int i=0;i<nbrEmp;i++){
-            if(employes[i] instanceof Responsable){
-                System.out.println("Responsable : "+employes[i].getNom()+ " Prime : "+((Responsable) employes[i]).getPrime());
+            if(employes[i] instanceof Responsable responsable){
+                System.out.println("Responsable : "+responsable.getNom()+ " Prime : "+responsable.getPrime());
             }
         }
 
